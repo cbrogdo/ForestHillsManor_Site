@@ -1,0 +1,403 @@
+<html>
+	
+	<head>
+		<title>Tenant Application</title>
+		<link rel="stylesheet" href="./style.css" type="text/css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+	
+	<body class="col-md-12">
+		<div class="content">
+			<div class="navi">
+				<div class="title">
+					<h1>
+						Forest Hills Manor
+					</h1>
+				</div>
+				<nav>
+					<a href="./home.html"> Home </a>
+					<a href="./about.html"> About Us </a>
+					<a href="./contact.html"> Contacts </a>
+					<a href="./chat.html">Chat</a>
+					<a href="./units.html">Units</a>
+					<a href="./floor_plans.html"> Floor Plans</a>
+					<a href="./application.html"> Applications </a>
+					<a href="./payment.html">Payments</a>
+					<a href="./faq.html"> FAQ </a>		
+				</nav>
+			</div>
+			<div class="data">
+			<h1 class="app">Rental Application Form</h1>
+			<form class="application" method="post">
+				<label for="date_submit">Date:
+					<input type="date" name="date_submit" id="date_submit">
+				</label>
+				
+				
+				<div class="student">
+					<h2 class="col-md-8">Student Information</h2>
+		
+				<label for="name_stud" class="col-md-5">Full Name:
+					<input type="text" class="form-control" id="name_stud" name="name_stud" />
+				</label>
+				<label for="nick" class="col-md-5">Nickname:
+					<input type="text" class="form-control" id="nick" name="nick" />
+				</label>
+				<br />
+			
+				<label for="dob" class="col-md-5">Birth Date:
+					<input type="date" name="dob" id="dob">
+				</label>
+				<label for="ssn" class="col-md-5">Social Security Number:
+					<input type="text" class="form-control" id="ssn" name="ssn" />
+				</label>
+				<br />
+			
+				<label for="phone_stud" class="col-md-8">Phone Number:
+					<input type="text" class="form-control" id="phone_stud" name="phone_stud" />
+				</label>
+				<br />
+			
+				<label for="email" class="col-md-5">Email Address:
+					<input type="email" class="form-control" id="email" name="email" />
+				</label>
+				<label for="box" class="col-md-5">JMU Box No:
+					<input type="text" class="form-control" id="box" name="box" />
+				</label>
+				<br />
+			
+				<label class="col-md-5">Current Year:
+					<input name="radio" value="Freshman" type="radio" /> Freshman
+       	         	<input name="radio" value="Sophomore" type="radio" /> Sophomore
+       	         	<input name="radio" value="Junioor" type="radio" /> Junior
+                	<input name="radio" value="Senior" type="radio" /> Senior
+            	</label>   
+                
+				<label for="expect_grad" class="col-md-5">Expected Graduation Date:
+					<input type="text" class="form-control" id="expect_grad" name="expect_grad" />
+				</label>
+				<br />
+			
+				<label for="address_stud" class="col-md-8">Current Address:
+					<input type="text" class="form-control" id="address_stud" name="address_stud" />
+				</label>
+				<br />
+			
+				<label for="city_stud" class="col-md-5">City:
+					<input type="text" class="form-control" id="city_stud" name="city_stud" />
+				</label>
+				<label for="state_stud" class="col-md-3">State:
+					<select name="state_stud" id="state_stud">
+                        <option>- Choose One -</option>
+                        <option>Alabama</option>
+                        <option>Alaska</option>
+                        <option>Arizona</option>
+                        <option>Arkansas</option>
+                        <option>California</option>
+                        <option>Colorado</option>
+                        <option>Connecticut</option>
+                        <option>Deleware</option>
+                        <option>Florida</option>
+                        <option>Georgia</option>
+                        <option>Hawaii</option>
+                        <option>Idaho</option>
+                        <option>Illinois</option>
+                        <option>Indiana</option>
+                        <option>Iowa</option>
+                        <option>Kansas</option>
+                        <option>Kentucky</option>
+                        <option>Louisiana</option>
+                        <option>Maine</option>
+                        <option>Maryland</option>
+                        <option>Massachusetts</option>
+                        <option>Michigan</option>
+                        <option>Minnesota</option>
+                        <option>Mississippi</option>
+                        <option>Missouri</option>
+                        <option>Montana</option>
+                        <option>Nebraska</option>
+                        <option>Nevada</option>
+                        <option>New Hampshire</option>
+                        <option>New Jersey</option>
+                        <option>New Mexico</option>
+                        <option>New York</option>
+                        <option>North Carolina</option>
+                        <option>North Dakota</option>
+                        <option>Oklahoma</option>
+                        <option>Ohio</option>
+                        <option>Oregon</option>
+                        <option>Pennsylvania</option>
+                        <option>Rhode Island</option>
+                        <option>South Carolina</option>
+                        <option>South Dakota</option>
+                        <option>Tennessee</option>
+                        <option>Texas</option>
+                        <option>Utah</option>
+                        <option>Vermont</option>
+                        <option>Virginia</option>
+                        <option>Washington</option>
+                        <option>West Virginia</option>
+                        <option>Wisconsin</option>
+                        <option>Wyoming</option>
+                    </select>
+					</label>
+					<label for="zip_stud" class="col-md-4">Zip:
+						<input type="text" class="form-control" id="zip_stud" name="zip_stud" />
+					</label>
+					<br />
+			
+					<label for="address_end" class="col-md-8">At this Address Until:
+						<input type="text" class="form-control" id="address_end" name="address_end" />
+					</label>
+				</div>
+			
+			
+				<div class="cosign">
+					<h2 class="col-md-8">Parents or Cosign Information</h2>
+		
+					<label for="name_cosign" class="col-md-5">Full Name:
+						<input type="text" class="form-control" id="name_cosign" name="name_cosign" />
+					</label>
+					<label for="relation_cosign" class="col-md-5">Relationship:
+						<input type="text" class="form-control" id="relation_cosign" name="relation_cosign" />
+					</label>
+					<br />
+			
+					<label for="address_cosign" class="col-md-8">Current Address:
+						<input type="text" class="form-control" id="address_cosign" name="address_cosign" />
+					</label>
+					<br />
+					<label for="city_cosign" class="col-md-5">City:
+						<input type="text" class="form-control" id="city_cosign" name="city_cosign" />
+					</label>
+					<label for="state_cosign" class="col-md-3">State:
+						<select name="state_cosign" id="state_cosgin">
+                       	 	<option>- Choose One -</option>
+                       		<option>Alabama</option>
+                       	 	<option>Alaska</option>
+                        	<option>Arizona</option>
+                        	<option>Arkansas</option>
+                        	<option>California</option>
+                        	<option>Colorado</option>
+                        	<option>Connecticut</option>
+                        	<option>Deleware</option>
+                        	<option>Florida</option>
+                        	<option>Georgia</option>
+                        	<option>Hawaii</option>
+                        	<option>Idaho</option>
+                        	<option>Illinois</option>
+                        	<option>Indiana</option>
+                        	<option>Iowa</option>
+                       	 	<option>Kansas</option>
+                        	<option>Kentucky</option>
+                        	<option>Louisiana</option>
+                        	<option>Maine</option>
+                        	<option>Maryland</option>
+                        	<option>Massachusetts</option>
+                        	<option>Michigan</option>
+                        	<option>Minnesota</option>
+                        	<option>Mississippi</option>
+                        	<option>Missouri</option>
+                        	<option>Montana</option>
+                        	<option>Nebraska</option>
+                        	<option>Nevada</option>
+                        	<option>New Hampshire</option>
+                        	<option>New Jersey</option>
+                        	<option>New Mexico</option>
+                        	<option>New York</option>
+                       	 	<option>North Carolina</option>
+                        	<option>North Dakota</option>
+                        	<option>Oklahoma</option>
+                        	<option>Ohio</option>
+                        	<option>Oregon</option>
+                        	<option>Pennsylvania</option>
+                        	<option>Rhode Island</option>
+                        	<option>South Carolina</option>
+                        	<option>South Dakota</option>
+                        	<option>Tennessee</option>
+                        	<option>Texas</option>
+                        	<option>Utah</option>
+                        	<option>Vermont</option>
+                        	<option>Virginia</option>
+                        	<option>Washington</option>
+                        	<option>West Virginia</option>
+                        	<option>Wisconsin</option>
+                        	<option>Wyoming</option>
+                   		</select>
+					</label>
+					<label for="zip_cosign" class="col-md-4">Zip:
+						<input type="text" class="form-control" id="zip_cosign" name="zip_cosign" />
+					</label>
+					<br />
+					<label for="phone_cosign" class="col-md-8">Phone Number:
+						<input type="text" class="form-control" id="phone_cosign" name="phone_cosign" />
+					</label>
+					<br />
+				</div>
+			
+			
+				<div class="emer">
+					<h2 class="col-md-8">Alternative Person to Notify in case of Emergency</h2>
+					
+					<label for="name_emer" class="col-md-5">Full Name:
+						<input type="text" class="form-control" id="name_emer" name="name_emer" />
+					</label>
+					<label for="relation_emer" class="col-md-5">Relationship:
+						<input type="text" class="form-control" id="relation_emer" name="relation_emer" />
+					</label>
+					<br />
+			
+					<label for="address_emer" class="col-md-8">Current Address:
+						<input type="text" class="form-control" id="address_emer" name="address_emer" />
+					</label>
+					<br />
+				
+					<label for="city_emer" class="col-md-5">City:
+						<input type="text" class="form-control" id="city_emer" name="city_emer" />
+					</label>
+					<label for="state_emer" class="col-md-3">State:
+						<select name="state_emer" id="state_emer">
+                        	<option>- Choose One -</option>
+                        	<option>Alabama</option>
+                        	<option>Alaska</option>
+                        	<option>Arizona</option>
+                        	<option>Arkansas</option>
+                        	<option>California</option>
+                        	<option>Colorado</option>
+                        	<option>Connecticut</option>
+                        	<option>Deleware</option>
+                        	<option>Florida</option>
+                        	<option>Georgia</option>
+                        	<option>Hawaii</option>
+                        	<option>Idaho</option>
+                        	<option>Illinois</option>
+                        	<option>Indiana</option>
+                        	<option>Iowa</option>
+                        	<option>Kansas</option>
+                        	<option>Kentucky</option>
+                       	 	<option>Louisiana</option>
+                        	<option>Maine</option>
+                       	 	<option>Maryland</option>
+                        	<option>Massachusetts</option>
+                        	<option>Michigan</option>
+                        	<option>Minnesota</option>
+                        	<option>Mississippi</option>
+                        	<option>Missouri</option>
+                        	<option>Montana</option>
+                        	<option>Nebraska</option>
+                        	<option>Nevada</option>
+                        	<option>New Hampshire</option>
+                        	<option>New Jersey</option>
+                        	<option>New Mexico</option>
+                        	<option>New York</option>
+                        	<option>North Carolina</option>
+                        	<option>North Dakota</option>
+                        	<option>Oklahoma</option>
+                        	<option>Ohio</option>
+                        	<option>Oregon</option>
+                        	<option>Pennsylvania</option>
+                        	<option>Rhode Island</option>
+                       	 	<option>South Carolina</option>
+                       	 	<option>South Dakota</option>
+                        	<option>Tennessee</option>
+                        	<option>Texas</option>
+                        	<option>Utah</option>
+                        	<option>Vermont</option>
+                        	<option>Virginia</option>
+                        	<option>Washington</option>
+                        	<option>West Virginia</option>
+                        	<option>Wisconsin</option>
+                        	<option>Wyoming</option>
+                   	 	</select>
+					</label>
+					<label for="zip_emer" class="col-md-4">Zip:
+						<input type="text" class="form-control" id="zip_emer" name="zip_emer" />
+					</label>
+					<br />
+				
+					<label for="phone_emer" class="col-md-8">Phone Number
+						<input type="text" class="form-control" id="phone_emer" name="phone_emer" />
+					</label>
+					<br />
+				</div>
+			
+			
+				<div class="endorse">
+					<h2 class="col-md-8">Endorsement:</h2>
+					<label class="col-md-8">
+						<input id="sign" name="sign" value="signed" type="checkbox" /> I certify that the above information is correct and true and authorize verification of information given.
+					</label>
+					<br />
+					<label for="date_sign" class="col-md-8">Date:
+						<input type="date" name="date_sign" id="date_sign">
+					</label>
+				</div>
+			
+			
+				<div class="col-md-8">
+					<p>**Disclaimer: The submission of an application does not guantee that a lease will be offered.</p>
+					<input name="submit" type="submit" value="Submit" />
+        		    <input name="reset" type="reset" value="Reset" />
+        		    <br />
+        		    <br />
+       	 		</div>
+			</form>
+			</div>
+			
+			
+			<div class="footer">
+				<img src="" alt="Forest Hills Manor Logo">
+				<div class="text">
+					<p class="name">Forest Hills Manor</p>
+					<p>
+						1211 Sully Drive
+						<br/>
+						Harrisonburg, VA 22801
+						<br />
+						(540) 433-2279
+						<br />
+						<a href="mailto:info@foresthillsmanor.com.">info@foresthillsmanor.com</a>
+					</p>
+				</div>
+			</div>
+		</div>	
+		
+		
+		<script>
+		//validates the form elements of the name, email, radio buttons and check boxes field
+		$("#homeForm").validate({
+			//allows for css to affect the text color
+			errorClass: 'errorMessage',
+			//rules the input must meet
+			rules: {
+				name_stud: {
+					required: true,
+					minlength: 2
+				},
+				email: {
+					required: true,
+					email: true
+				},
+				radio: {
+					required: true
+				},
+				check: {
+					required: true
+				}
+				
+			},
+			//output if the forms were not valid
+			messages: {
+				name_stud: {
+					required: "Please enter a valid name.",
+					minlength: "Your name must be at least 2 characters"
+				},
+				email: "Please enter a valid email.",
+				radio: "Please select a button.",
+				check: "Please select a option."
+			}
+		})
+		
+		</script>
+	</body>
+</html>

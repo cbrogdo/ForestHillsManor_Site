@@ -1,0 +1,218 @@
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-moz-keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-webkit-keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-ms-keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-o-keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+	animation: fadeIn 2s;
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -ms-animation: fadein 2s;
+    -o-animation: fadein 2s;
+}
+body{
+	font-family: Arial, Helvetica, sans-serif;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    max-width: 97%;
+    margin: 0 auto;
+    font-size: 14px;
+    color: black;
+}
+.col-md-1 {width: 8.332%;}
+.col-md-2 {width: 16.664%;}
+.col-md-3 {width: 25%;}
+.col-md-4 {width: 33.333%;}
+.col-md-5 {width: 41.667%;}
+.col-md-6 {width: 50%;}
+.col-md-7 {width: 58.336%;}
+.col-md-8 {width: 66.666%;}
+.col-md-9 {width: 75%;}
+.col-md-10 {width: 83.334%;}
+.col-md-11 {width: 91.666%;}
+.col-md-12 {width: 100%;}
+
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9,
+.col-md-10, .col-md-11 {
+    float: left;
+    padding-right: 5px;
+}
+
+.col-md-offset-0 {margin-left: 0;}
+.col-md-offset-1 {margin-left: 8.332%;}
+.col-md-offset-2 {margin-left: 16.664%;}
+.col-md-offset-3 {margin-left: 25%;}
+.col-md-offset-4 {margin-left: 33.333%;}
+.col-md-offset-5 {margin-left: 41.667%;}
+.col-md-offset-6 {margin-left: 50%;}
+.col-md-offset-7 {margin-left: 58.336%;}
+.col-md-offset-8 {margin-left: 66.666%;}
+.col-md-offset-9 {margin-left: 75%;}
+.col-md-offset-10 {margin-left: 83.334%;}
+.col-md-offset-11 {margin-left: 91.666%;}
+
+
+.content{
+	padding-left: 15px;
+    padding-right: 15px;
+}
+
+.navi{
+	background-color: #510bd9;
+	border-radius: 5px !important;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    padding: 0px 10px;
+}
+.navi a{
+	display: inline-block;
+	position: relative;
+	font-weight: bold;
+    color: black !important;
+    border-radius: 3px;
+	padding: 5px 15px;
+	margin-right: 5px;
+	background-color: lightgrey;
+	border: 1px solid #ffbc2e;
+	text-decoration: none;
+}
+.navi a:hover{
+	color: black !important;
+    background-color: #ffbc2e;
+	transform: scale(1.1);
+    text-decoration: none;
+}
+
+.title{
+	backgorund-color: #d9a90b;
+	color: #ffbc2e;
+	float: left;
+	margin-top: 0px;
+    margin-bottom: 5px;
+    padding: 15px 15px;
+    vertical-align: middle;
+}
+nav{
+	float: right;
+	margin-top: 0px;
+    margin-bottom: 5px;
+    padding: 30px 10px;
+}
+.data{
+	margin: 0px 25px;
+	padding: 0px 20px;
+}
+.data .info{
+	padding-left: 25px;
+}
+.info .section p{
+	padding-right: 55px;
+}
+
+.footer{
+	background-color: #510bd9;
+	border-radius: 5px !important;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    padding: 0px;
+}
+.footer .text{
+	clear: both;
+    text-align: right;
+    border-top: 1px solid #510bd9;
+    color: white;
+    padding-right: 7px;
+    vertical-align: middle;
+    border-radius: 5px;
+    font-size: 10px;
+    float: right;
+}
+.footer .name{
+	font-size: 16px;
+	color: #ffbc2e;
+}
+.footer a{
+	color: #ffbc2e;
+	text-decoration: none;
+}
+.footer a:hover{
+	color: #0bd9c4;
+	text-decoration: underline;
+}
+.footer img{
+	float: left;
+	color: white;
+	padding: 3px;
+}
+
+
+
+
+.app{
+	text-align: center;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.application{
+	margin: 5px;
+}
+.application input, .application select{
+	padding: 0px 30px;
+
+}
+.student label, .cosign label, .emer label{
+	padding-left: 50px;
+	padding-right: 50px;
+}
+.endorse label{
+	padding-left: 30px;
+}
+label {
+    font-weight: bold;
+    margin-top: 5px;
+    display: inline-block;
+}
+.application h2{
+	padding-top:10px;
+}
+
+.image p{
+	float: right;
+	padding: 30px 5px;
+}
+
+
+
+.navi:after, .title:after, .footer:after, form:after, .image:after, .info:after{
+	content: " ";
+    display: table;
+    clear: both;
+}
+
+
+
+
