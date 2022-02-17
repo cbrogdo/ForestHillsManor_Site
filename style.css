@@ -129,8 +129,17 @@ nav{
 .data .info{
 	padding-left: 25px;
 }
+.data .info .answer{
+	padding-left: 35px;
+}
+
+
 .info .section p{
 	padding-right: 55px;
+}
+
+.radio{
+	padding: 8px;
 }
 
 .footer{
@@ -204,6 +213,7 @@ label {
 	float: right;
 	padding: 50px 5px;
 }
+
 
 
 
