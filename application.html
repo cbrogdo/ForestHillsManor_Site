@@ -4,6 +4,28 @@
 		<title>Tenant Application</title>
 		<link rel="stylesheet" href="./style.css" type="text/css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.js"></script>
+		<script>
+			var date = new Date();
+			var month = (date.getMonth()+1).toString();
+			var day = date.getDate().toString();
+			var year = date.getFullYear().toString();
+			
+			function start(){
+				if(month.length < 2 ){
+					month = "0"+month;
+				}
+				if(day.length < 2 ){
+					day= "0"+day;
+				}
+				document.getElementById("date_submit").innerHTML = month + "/" + day + "/" + year;
+				
+				//document.getElementById("date_submit").innerHTML = date.toString().slice(3,15);
+			}
+			
+			window.addEventListener("load", start, false);
+		</script>
 	</head>
 	
 	<body class="col-md-12">
@@ -28,14 +50,20 @@
 			</div>
 			<div class="data">
 			<h1 class="app">Rental Application Form</h1>
-			<form class="application" method="post">
-				<label for="date_submit">Date:
+			<form id="appForm" class="application" method="post">
+				<!--<label for="date_submit">Date:
 					<input type="date" name="date_submit" id="date_submit">
-				</label>
-				
+				</label>-->
+				<h2>Mail In Applications:</h2>
+				<p class="mailin">To mail in applications, please print out 4 copies for you and 3 others. <br />Fill out the applications and mail to: <br /><span class="col-md-offset-3">Forest Hills Manor </span><br /><span class="col-md-offset-3"> 1211 Sully Drive </span><br /><span class="col-md-offset-3">Harrisonburg, VA 22801</span></p>
+				<p class="mailin"><a href="FHMRentalApp.pdf">Rental Application Form</a></p>
+				<hr>
+				<h2>Online Application</h2>
+				<p class="date_sub">Date: <span id="date_submit"></span>
+				</p>
 				
 				<div class="student">
-					<h2 class="col-md-8">Student Information</h2>
+					<h3 class="col-md-8">Student Information</h3>
 		
 				<label for="name_stud" class="col-md-6">Full Name:
 					<input type="text" class="form-control" id="name_stud" name="name_stud" />
@@ -67,10 +95,10 @@
 				<br />
 			
 				<label class="col-md-6">Current Year:
-					<span class="radio"><input name="radio" value="Freshman" type="radio" /> Freshman </span>
-       	         	<span class="radio"><input name="radio" value="Sophomore" type="radio" /> Sophomore </span>
-       	         	<span class="radio"><input name="radio" value="Junioor" type="radio" /> Junior </span>
-                	<span class="radio"><input name="radio" value="Senior" type="radio" /> Senior </span>
+					<span class="radio"><input name="year" value="Freshman" type="radio" /> Freshman </span>
+       	         	<span class="radio"><input name="year" value="Sophomore" type="radio" /> Sophomore </span>
+       	         	<span class="radio"><input name="year" value="Junioor" type="radio" /> Junior </span>
+                	<span class="radio"><input name="year" value="Senior" type="radio" /> Senior </span>
             	</label>   
                 
 				<label for="expect_grad" class="col-md-6">Expected Graduation Date:
@@ -153,7 +181,7 @@
 			
 			
 				<div class="cosign">
-					<h2 class="col-md-8">Parents or Cosigner Information</h2>
+					<h3 class="col-md-8">Parents or Cosigner Information</h3>
 		
 					<label for="name_cosign" class="col-md-6">Full Name:
 						<input type="text" class="form-control" id="name_cosign" name="name_cosign" />
@@ -237,7 +265,7 @@
 			
 			
 				<div class="emer">
-					<h2 class="col-md-8">Alternative Person to Notify in case of Emergency</h2>
+					<h3 class="col-md-8">Alternative Person to Notify in case of Emergency</h3>
 					
 					<label for="name_emer" class="col-md-6">Full Name:
 						<input type="text" class="form-control" id="name_emer" name="name_emer" />
@@ -323,7 +351,7 @@
 			
 			
 				<div class="endorse">
-					<h2 class="col-md-8">Endorsement:</h2>
+					<h3 class="col-md-8">Endorsement:</h3>
 					<label class="col-md-8">
 						<input id="sign" name="sign" value="signed" type="checkbox" /> I certify that the above information is correct and true and authorize verification of information given.
 					</label>
@@ -363,9 +391,11 @@
 		</div>	
 		
 		
+		
+		
 		<script>
-		//validates the form elements of the name, email, radio buttons and check boxes field
-		$("#homeForm").validate({
+		//validates the form elements 
+		$("#appForm").validate({
 			//allows for css to affect the text color
 			errorClass: 'errorMessage',
 			//rules the input must meet
@@ -374,14 +404,105 @@
 					required: true,
 					minlength: 2
 				},
+				dob: {
+					required: true
+				},
+				ssn: {
+					required: true,
+					minlength: 11,
+					maxlength: 11
+				},
+				phone_stud:{
+					required: true,
+					minlength: 10
+				},
 				email: {
 					required: true,
 					email: true
 				},
-				radio: {
+				box: {
 					required: true
 				},
-				check: {
+				year: {
+					required: true
+				},
+				expect_grad: {
+					required: true,
+					minlength: 9
+				},
+				address_stud: {
+					required: true
+				},
+				city_stud: {
+					required: true
+				},
+				state_stud: {
+					required: true
+				},
+				zip_stud: {
+					required: true,
+					minlength: 5
+				},
+				address_end: {
+					required: true
+				},
+				
+				name_cosign: {
+					required: true,
+					minlengt: 2
+				},
+				relation_cosign: {
+					required: true
+				},
+				address_cosign: {
+					required: true
+				},
+				city_cosign: {
+					required: true
+				},
+				state_cosign: {
+					required: true
+				},
+				zip_cosign: {
+					required: true,
+					minlength: 5
+				},
+				phone_cosign: {
+					required: true,
+					minlength: 10
+				},
+				
+				
+				
+				name_emer: {
+					required: true,
+					minlength: 2
+				},
+				relation_emer: {
+					required: true
+				},
+				address_emer: {
+					required: true
+				},
+				city_emer: {
+					required: true
+				},
+				state_emer: {
+					required: true
+				},
+				zip_emer: {
+					required: true,
+					minlength: 5
+				},
+				phone_emer: {
+					required: true,
+					minlength: 10
+				},
+				
+				sign: {
+					required: true
+				},
+				date_sign: {
 					required: true
 				}
 				
@@ -392,9 +513,101 @@
 					required: "Please enter a valid name.",
 					minlength: "Your name must be at least 2 characters"
 				},
+				dob: {
+					required: "Please enter your date of birth"
+				},
+				ssn: {
+					required: "Please enter your Social Security Number.",
+					minlength: "Your Social Security Number should be in the format XXX-XX-XXXX",
+					maxlength: "Your Social Security Number should be in the format XXX-XX-XXXX"
+				},
+				phone_stud: {
+					required: "Please enter their phone number.",
+					minlength: "The phone number must be 10 characters."
+				},
 				email: "Please enter a valid email.",
-				radio: "Please select a button.",
-				check: "Please select a option."
+				box: {
+					required: "Please enter your JMU box."
+				},
+				year: "Please select your current year.",
+				expect_grad: {
+					required: "Please enter your expected graduation date(i.e. Spring 2022)",
+					minlength: "Graduation Date should be in the format Semester Year (i.e. Spring 2022)"
+				},
+				address_stud: {
+					required: "Please enter your current address."
+				},
+				city_stud: {
+					required: "Please enter your current city of residence."
+				},
+				state_stud: {
+					required: "Please enter you current state of residence"
+				},
+				zip_stud: {
+					required: "Please enter your zip code",
+					minlength: "Your zip code should be 5 digits long."
+				},
+				address_end: {
+					required: "Please enter how long you expect to be at this address."
+				},
+				
+				
+				name_cosign: {
+					required: "Please enter the name of a parent or cosigner.",
+					minlengt: "The name should be at least 2 characters."
+				},
+				relation_cosign: {
+					required: "Please enter your relationship with this person."
+				},
+				address_cosign: {
+					required: "Please enter their address."
+				},
+				city_cosign: {
+					required: "Please enter their city of residence."
+				},
+				state_cosign: {
+					required: "Please enter their state of residence."
+				},
+				zip_cosign: {
+					required: "Please enter their zip code.",
+					minlength: "Their zip code should be 5 digits long."
+				},
+				phone_cosign: {
+					required: "Please enter their phone number.",
+					minlength: "The phone number must be 10 characters."
+				},
+				
+				
+				
+				name_emer: {
+					required: "Please enter the name of an emergency contact.",
+					minlengt: "The name should be at least 2 characters."
+				},
+				relation_emer: {
+					required: "Please enter your relationship with this person."
+				},
+				address_emer: {
+					required: "Please enter their address."
+				},
+				city_emer: {
+					required: "Please enter their city of residence."
+				},
+				state_emer: {
+					required: "Please enter their state of residence."
+				},
+				zip_emer: {
+					required: "Please enter their zip code.",
+					minlength: "Their zip code should be 5 digits long."
+				},
+				phone_emer: {
+					required: "Please enter their phone number.",
+					minlength: "The phone number must be 10 characters."
+				},
+				
+				
+				
+				sign: "Please check the box to electronically sign this document.",
+				date_sign: "Please enter a date to complete the signature."
 			}
 		})
 		

@@ -208,13 +208,23 @@ label {
 .application h2{
 	padding-top:10px;
 }
+.date_sub{
+	font-weight: bold;
+	font-size: 18px; 
+	padding-left: 10px;
+}
+.mailin{
+	padding-left: 20px;
+}
 
 .image p{
 	float: right;
 	padding: 50px 5px;
 }
 
-
+hr{
+	border: 5px dotted #510bd9; !important
+}
 
 
 .navi:after, .title:after, .footer:after, form:after, .image:after, .info:after{
@@ -226,3 +236,6 @@ label {
 
 
 
+.errorMessage{
+	color: red;
+}
