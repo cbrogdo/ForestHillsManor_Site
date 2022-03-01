@@ -137,6 +137,16 @@ nav{
 .info .section p{
 	padding-right: 55px;
 }
+.home-img{
+	float: left;
+}
+.home-text{
+	float: right;
+	background-color: #e6f7ff;
+	padding:20px 40px;
+	height: 440px;
+	vertical-align: middle;
+}
 
 .radio{
 	padding: 8px;
@@ -227,7 +237,7 @@ hr{
 }
 
 
-.navi:after, .title:after, .footer:after, form:after, .image:after, .info:after{
+.navi:after, .title:after, .footer:after, form:after, .image:after, .info:after, .home-img:after{
 	content: " ";
     display: table;
     clear: both;
