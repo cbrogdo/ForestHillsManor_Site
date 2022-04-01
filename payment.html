@@ -3,6 +3,8 @@
 		<title> Forest Hills Manor Payments</title>
 		<link rel="stylesheet" href="./style.css" type="text/css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.js"></script>
 		<!--Start of Tawk.to Script-->
         <script type="text/javascript">
             var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -25,15 +27,13 @@
 			
 			<div class="navi">
 				<div class="title">
-					<h1>
-						Forest Hills Manor
-					</h1>
+					<img src="./Images/FHM_PplLogo.jpeg"  alt="Forest Hills Manor Logo" heigt="150" width="210"">
 				</div>
 				<nav>
 					<a href="./home.html"> Home </a>
 					<a href="./about.html"> About Us </a>
 					<a href="./contact.html"> Contacts </a>
-					<a href="./chat.html">Chat</a>
+					<a href="./amenities.html">Amenities</a>
 					<a href="./units.html">Units</a>
 					<a href="./floor_plans.html"> Floor Plans</a>
 					<a href="./application.html"> Applications </a>
@@ -46,11 +46,71 @@
 			<div class="data">
 				<h2>Payments</h2>
 				<div class="info">
+					<form id="cardPay" class="payment" method="post">
+						<div class="card-pay">
+							<h3 class="col-md-8">Credit Card Payment</h3>
+		
+							<label for="CardHldrName" class="col-md-12">Card Holder's Name:
+								<input type="text" class="form-control" id="CardHldrName" name="CardHldrName" />
+							</label>
+							<br />
+							
+							<label for="CardNum" class="col-md-6">Card Number:
+								<input type="text" class="form-control" id="CardNum" name="CardNum" />
+							</label>
+							<label for="CVV" class="col-md-6">Card Verification Value:
+								<input type="text" class="form-control" id="CVV" name="CVV" />
+							</label>
+							<br />
+							<label for="ExpDate" class="col-md-6"> Expiration Date:
+								<input type="text" class="form-control" id="ExpDate" name="ExpDate" placeholder="MM/YY" />
+							</label>
+							<br />
+				
+							<label for="ZipCode" class="col-md-6">Zip Code:
+								<input type="text" class="form-control" id="ZipCode" name="ZipCode" placeholder="#####" />
+							</label>
+							<br />
+							<div class="col-md-12">
+								<input name="submit" type="submit" value="Submit" />
+        		    			<input name="reset" type="reset" value="Reset" />
+        		    		</div>
+							<hr>
+						</div>
+					</form>
+					<form id="bankPay" class="payment" method="post">
+						<div class="bank-pay">
+							<h3 class="col-md-8">Bank Payment</h3>
+		
+							<label for="AccHldrName" class="col-md-12">Account Holder's Name:
+								<input type="text" class="form-control" id="AccHldrName" name="AccHldrName" />
+							</label>
+							<br />
+							<label for="AccType" class="col-md-3">Account Type:
+								<input type="text" class="form-control" id="AccType" name="AccType" />
+							</label>
+							<label for="AccNum" class="col-md-9">Account Number:
+								<input type="text" class="form-control" id="AccNum" name="AccNum">
+							</label>
+							<br />
+							<label for="RouteNum" class="col-md-12">Route Number:
+								<input type="text" class="form-control" id="RouteNum" name="RouteNum" />
+							</label>
+							<br />
+							<div class="col-md-12">
+								<input name="submit" type="submit" value="Submit" />
+        		    			<input name="reset" type="reset" value="Reset" />
+        		    		</div>
+						</div>
+					</form>
+					</div>
+					</form>
+				
 				</div>
 			</div>
 			
 			<div class="footer">
-				<img src="" alt="Forest Hills Manor Logo">
+				<img src="./Images/FHM_SqrLogo.jpg" alt="Forest Hills Manor Logo" height="175" width="175">
 				<div class="text">
 				<p class="name">Forest Hills Manor</p>
 				<p>
@@ -69,6 +129,89 @@
 		
 		
 		
+		
+		
+		<script>
+		//validates the card form elements 
+		$("#cardPay").validate({
+			//allows for css to affect the text color
+			errorClass: 'errorMessage',
+			//rules the input must meet
+			rules: {
+				CardHldrName: {
+					required: true,
+					minlength: 2
+				},
+				CardNum: {
+					required: true
+				},
+				CVV: {
+					required: true,
+					minlength: 3,
+					maxlength: 4
+				},
+				ExpDate:{
+					required: true,
+					minlength: 5
+				},
+				ZipCode: {
+					required: true
+				}
+			},
+			//output if the forms were not valid
+			messages: {
+				CardHldrName: {
+					required: "Please enter a valid name.",
+					minlength: "Card Holder Name must be at least 2 characters."
+				},
+				CardNum: {
+					required: "Please enter your card number."
+				},
+				CVV: {
+					required: "Please enter your Card Verification Value.",
+					minlength: "Your Card Verification Value should be 3-4 digits.",
+					maxlength: "Your Card Verification Value should be 3-4 digits."
+				},
+				ExpDate: {
+					required: "Please enter your card expiration date.",
+					minlength: "The expiration date should be in the format MM/YY."
+				},
+				ZipCode: "Please enter a valid zip code."
+			}
+		})
+		//validates the card form elements 
+		$("#bankPay").validate({
+			//allows for css to affect the text color
+			errorClass: 'errorMessage',
+			//rules the input must meet
+			rules: {
+				AccHldrName: {
+					required: true,
+					minlength: 2
+				},
+				AccNum: {
+					required: true
+				},
+				AccType: {
+					required: true
+				},
+				RouteNum:{
+					required: true,
+				}
+			},
+			//output if the forms were not valid
+			messages: {			
+				AccHldrName: {
+					required: "Please enter your JMU box.",
+					minlength: "Account Holder Name must be at least 2 characters."
+				},
+				AccNum: "Please enter your account number.",
+				AccType: "Please enter your account type.",
+				RouteNum: "Please enter the route number."
+			}
+		})
+		
+		</script>
 	</body>
 
 </html>
