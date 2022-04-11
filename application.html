@@ -27,17 +27,7 @@
 			window.addEventListener("load", start, false);
 		</script>
 		<!--Start of Tawk.to Script-->
-        <script type="text/javascript">
-            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-            (function(){
-            	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            	s1.async=true;
-            	s1.src='https://embed.tawk.to/621e6a5b1ffac05b1d7c7534/1ft3cutuv';
-            	s1.charset='UTF-8';
-            	s1.setAttribute('crossorigin','*');
-            	s0.parentNode.insertBefore(s1,s0);
-            })();
-        </script>
+
     	<!--End of Tawk.to Script-->
 	</head>
 	
@@ -45,13 +35,13 @@
 		<div class="content">
 			<div class="navi">
 				<div class="title">
-					<img src="./Images/FHM_PplLogo.jpeg"  alt="Forest Hills Manor Logo" heigt="150" width="210"">
+					<img src="./Images/FHM_PplLogo.jpeg"  alt="Forest Hills Manor Logo" height="150" width="210">
 				</div>
 				<nav>
 					<a href="./home.html"> Home </a>
 					<a href="./about.html"> About Us </a>
 					<a href="./contact.html"> Contacts </a>
-					<a href="./amenities.html">Amenities</a>
+					<a href="./chat.html">Chat</a>
 					<a href="./units.html">Units</a>
 					<a href="./floor_plans.html"> Floor Plans</a>
 					<a href="./application.html"> Applications </a>
@@ -61,7 +51,7 @@
 			</div>
 			<div class="data">
 			<h1 class="app">Rental Application Form</h1>
-			<form id="appForm" class="application" method="post">
+			<form id="appForm" class="application" action="data.php" method="post">
 				<!--<label for="date_submit">Date:
 					<input type="date" name="date_submit" id="date_submit">
 				</label>-->
@@ -71,7 +61,6 @@
 				<hr>
 				<h2>Online Application</h2>
 				<p class="date_sub">Date: <span id="date_submit"></span>
-				</p>
 				
 				<div class="student">
 					<h3 class="col-md-8">Student Information</h3>
@@ -105,10 +94,10 @@
 				</label>
 				<br />
 			
-				<label class="col-md-6">Current Year:
+				<label for="year" class="col-md-6">Current Year:
 					<span class="radio"><input name="year" value="Freshman" type="radio" /> Freshman </span>
        	         	<span class="radio"><input name="year" value="Sophomore" type="radio" /> Sophomore </span>
-       	         	<span class="radio"><input name="year" value="Junioor" type="radio" /> Junior </span>
+       	         	<span class="radio"><input name="year" value="Junior" type="radio" /> Junior </span>
                 	<span class="radio"><input name="year" value="Senior" type="radio" /> Senior </span>
             	</label>   
                 
@@ -460,7 +449,7 @@
 				
 				name_cosign: {
 					required: true,
-					minlengt: 2
+					minlength: 2
 				},
 				relation_cosign: {
 					required: true
