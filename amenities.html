@@ -3,6 +3,10 @@
 		<title> Forest Hills Manor Chat</title>
 		<link rel="stylesheet" href="./style.css" type="text/css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+		<script src="jQueryAssets/jquery.ui-1.10.4.accordion.min.js"></script>
+		
 		<!--Start of Tawk.to Script-->
         <script type="text/javascript">
             var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -15,7 +19,61 @@
             	s0.parentNode.insertBefore(s1,s0);
             })();
         </script>
-    	<!--End of Tawk.to Script-->
+        <!--End of Tawk.to Script-->
+        
+        <script>
+		<!--
+			function start(){
+				//imageInterval();
+			}
+			/*function over(e){
+				//verifies the header mouse is over is the shepherd header
+				if(e.target.getAttribute("id") == "amenity"){
+					e.target.setAttribute("style", "height=200 width=300")
+				}
+			}
+			//returns the header back to a black color and the original text
+			function out(e){
+				//verifies the header mouse is over is the shepherd header
+				if(e.target.getAttribute("id") == "amenity"){
+					e.target.setAttribute("style", "height=100 width=150")
+				}
+			}*/
+	
+			function reset(){
+				document.getElementById("cabinets").setAttribute("style", "height=100 width=150");
+				
+				document.getElementById("kitchen").setAttribute("style", "height=100 width=150");
+				
+				document.getElementById("stairs").setAttribute("style", "height=100 width=150");
+				
+				document.getElementById("washer").setAttribute("style", "height=100 width=150");
+				
+				document.getElementById("living").setAttribute("style", "height=100 width=150");
+			}
+	
+			//animates the clicked image, increasing the size of the image
+			$(document).ready(function(){
+				$('img').click(function(){
+					$(this).each(function(){
+						reset();
+						$(this).animate(
+							{height:'200px', width:'300px'},
+							1000, function(){}
+						);
+					});
+				});
+			});
+			
+			//calls over once the mouse is over an object 
+			//document.addEventListener("mouseover", over, false);
+			//calls out once the mouse has left an object 
+			//document.addEventListener("mouseout", out, false);
+			//calls start once the window loads
+			window.addEventListener("load", start, false);
+		//-->
+		</script>
+    	
 	</head>
 	
 	<body class="col-md-12">
@@ -25,7 +83,7 @@
 			
 			<div class="navi">
 				<div class="title">
-					<img src="./Images/FHM_PplLogo.jpeg"  alt="Forest Hills Manor Logo" heigt="150" width="210"">
+					<img src="./Images/FHM_PplLogo.jpeg"  alt="Forest Hills Manor Logo" heigt="150" width="210">
 				</div>
 				<nav>
 					<a href="./home.html"> Home </a>
@@ -58,7 +116,7 @@
 						<li>Phone Hookup *</li>
 					</ul>
 					<br />
-					<p>* Some room amenities my cost extra. Please contact <a href="mailto:info@foresthillsmanor.com">info@foresthillsmanor.com</a> for more information.</p>
+					
 					</div>
 					<div class="section col-md-4">
 					<h4> Town Home Amenities</h4>
@@ -88,6 +146,20 @@
 						<li>Ample Parking</li>
 						<li>On Bus Route</li>
 					</ul>
+					<br />
+					<br />
+					<br />
+					</div>
+					<div class="image-list">
+						<img src="./Images/Cabinets.jpeg" alt="Cabinet Amenity" id="cabinets" height="100" width="150">
+						<img src="./Images/Kitchen.jpeg" alt="Kitchen Amenity" id="kitchen" height="100" width="150">
+						<img src="./Images/Stairwell.jpeg" alt="Stairwell Amenity" id="stairs" height="100" width="150">
+						<img src="./Images/Washing.jpeg" alt="Washing Machines Amenity" id="washer" height="100" width="150">
+						<img src="./Images/LivingArea.jpeg" alt="Living Room Amenity" id="living" height="100" width="150">
+						<br />
+					</div>
+					<div>
+						<p>* Some room amenities my cost extra. Please contact <a href="mailto:info@foresthillsmanor.com">info@foresthillsmanor.com</a> for more information.</p>
 					</div>
 				</div>
 			</div>

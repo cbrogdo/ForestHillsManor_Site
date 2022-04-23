@@ -153,6 +153,15 @@ nav{
 .info .section p{
 	padding-right: 55px;
 }
+p a{
+	color: #510bd9;
+	text-decoration: none;
+}
+p a:hover{
+	color: #0B32D9;
+	background-color: #66CCFF5C;
+	text-decoration: underline;
+}
 /*End of Main Content Styling*/
 
 
@@ -187,6 +196,7 @@ nav{
 }
 .footer a:hover{
 	color: #0bd9c4;
+	background-color: #510bd9;
 	text-decoration: underline;
 }
 /*End of Footer Styling*/
@@ -195,14 +205,51 @@ nav{
 
 /*Home Page Styling*/
 .home-img{
-	float: left;
 }
-.home-text{
+.home-banner{
 	float: right;
-	background-color: #e6f7ff;
+	background-color: #E6F7FF99;
 	padding:20px 40px;
 	height: 440px;
 	vertical-align: middle;
+}
+.info .home-img + p{
+	float: left;
+}
+.button a{
+	color: #510bd9 !important;
+	background-color: #ffbc2e;
+	text-decoration: none;
+	padding: 20px 26px;
+	margin: 50px 10px;
+    font-size: 1.75em;
+    border-radius: 5px;
+    border: 1px outset buttonface !important;
+    float: left;
+}
+.button a:hover{
+	color: #ffbc2e !important;
+	background-color: #510bd9;
+	text-decoration: none;
+	padding: 20px 26px;
+	margin: 50 10px;
+    font-size: 1.75em;
+    border-radius: 5px;
+    border: 1px outset buttonface !important;
+}
+.info .home-img{
+	margin: 20px;
+}
+.home-text{
+	padding: 20px;
+}
+.home-img-left{
+	padding:10px 100px 10px 50px;
+	float: left;
+}
+.home-img-right{
+	padding:10px 50px 10px 100px;
+	float: right;
 }
 /*End of Home Page Styling*/
 
@@ -269,12 +316,38 @@ label {
 /*End of Floor Plans Styling*/
 
 
+/*Amenities Page Styling*/
+.image-list img{
+	float:left;
+	padding: 20px;
+}
+.image-list img:hover{
+	cursor:pointer;
+}
+.image-list{
+	margin:50px 5px;
+	padding-top:400px;
+}
+/*End of Amenities Page Styling*/
+
+/*About Us Page Styling*/
+.owner{
+	float: left;
+	padding: 15px 20px;
+}
+.hstry{
+	padding: 125px 100px;
+}
+/*End of About Us Page Styling*/
+
+
 hr{
 	border: 5px dotted #510bd9; !important
 }
 
 
-.navi:after, .title:after, footer-text:before, .footer:after, form:after, .image:after, .info:after, .home-img:after{
+.navi:after, .title:after, footer-text:before, .footer:after, form:after, .image:after, .info:after,
+ .home-img:after, .button:after, .info p img:after, .image-list:after, .hstry:after{
 	content: " ";
     display: table;
     clear: both;
