@@ -27,7 +27,7 @@
 			
 			<div class="navi">
 				<div class="title">
-					<img src="./Images/FHM_PplLogo.jpeg"  alt="Forest Hills Manor Logo" heigt="150" width="210"">
+					<img src="./Images/FHM_PplLogo.jpeg"  alt="Forest Hills Manor Logo" height="150" width="210">
 				</div>
 				<nav>
 					<a href="./home.html"> Home </a>
@@ -46,7 +46,7 @@
 			<div class="data">
 				<h2>Payments</h2>
 				<div class="info">
-					<form id="cardPay" class="payment" method="post">
+					<form id="cardPay" class="payment" method="post" action="cardPayment.php">
 						<div class="card-pay">
 							<h3 class="col-md-8">Credit Card Payment</h3>
 		
@@ -78,7 +78,7 @@
 							<hr>
 						</div>
 					</form>
-					<form id="bankPay" class="payment" method="post">
+					<form id="bankPay" class="payment" method="post" action="bankPayment.php">
 						<div class="bank-pay">
 							<h3 class="col-md-8">Bank Payment</h3>
 		
@@ -104,10 +104,12 @@
 						</div>
 					</form>
 					</div>
-					</form>
+					
 				
 				</div>
 			</div>
+			
+			<p class="col-md-12">**NOTE: Please enter either your credit card or your bank account.</p>
 			
 			<div class="footer">
 				<img src="./Images/FHM_SqrLogo.jpg" alt="Forest Hills Manor Logo" height="175" width="175">
