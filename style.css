@@ -299,6 +299,14 @@ label {
 /*End of Form Styling*/
 
 
+/*Contact Page Styling*/
+.info-contact{
+	padding-left: 25px;
+}
+.info-contact>p{
+	padding-left: 35px;
+}
+/*End of Contact Page Styling*/
 
 /*Application Styling*/
 .mailin{
@@ -312,6 +320,12 @@ label {
 .image p{
 	float: right;
 	padding: 50px 5px;
+}
+.plan-type{
+	margin-top: 20px;
+}
+.image{
+	margin: 50px 0px;
 }
 /*End of Floor Plans Styling*/
 
@@ -340,6 +354,18 @@ label {
 }
 /*End of About Us Page Styling*/
 
+/*Units Page Styling*/
+.unit-avail{
+	padding: 15px 20px;
+}
+.unit-avail > img{
+	float: right;
+	padding-bottom: 50px;
+}
+.unit-type{
+	padding-left: 25px;
+}
+/*End of Units Page Styling*/
 
 hr{
 	border: 5px dotted #510bd9; !important
